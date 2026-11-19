@@ -20,7 +20,6 @@ def ajouter(texte):
     taches = charger()
     taches.append({"texte": texte, "faite": False})
     sauvegarder(taches)
-    print("DEBUG", taches)
     print(f"Tâche ajoutée : {texte}")
 
 
