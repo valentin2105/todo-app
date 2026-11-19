@@ -33,9 +33,16 @@ def lister():
     print(f"Total : {len(taches)} tâche(s)")
 
 
+def terminer(numero):
+    taches = charger()
+    taches[numero - 1]["faite"] = True
+    sauvegarder(taches)
+    print(f"Tâche {numero} terminée.")
+
+
 def afficher_aide():
     print("Usage : python todo.py <commande> [arguments]")
-    print("Commandes : ajouter <texte>, lister, aide")
+    print("Commandes : ajouter <texte>, lister, terminer <numéro>, aide")
 
 
 def main():
@@ -47,6 +54,8 @@ def main():
         ajouter(" ".join(sys.argv[2:]))
     elif commande == "lister":
         lister()
+    elif commande == "terminer":
+        terminer(int(sys.argv[2]))
     elif commande == "aide":
         afficher_aide()
     else:
