@@ -39,11 +39,15 @@ def terminer(numero):
     sauvegarder(taches)
     print(f"Tâche {numero} terminée.")
 
+def supprimer(numero):
+    taches = charger()
+    tache = taches.pop(numero - 1)
+    sauvegarder(taches)
+    print(f"Tâche supprimée : {tache['texte']}")
 
 def afficher_aide():
     print("Usage : python todo.py <commande> [arguments]")
-    print("Commandes : ajouter <texte>, lister, terminer <numéro>, aide")
-
+    print("Commandes : ajouter <texte>, lister, terminer <numéro>, supprimer <numéro>, aide")
 
 def main():
     if len(sys.argv) < 2:
@@ -56,6 +60,8 @@ def main():
         lister()
     elif commande == "terminer":
         terminer(int(sys.argv[2]))
+    elif commande == "supprimer":
+        supprimer(int(sys.argv[2]))
     elif commande == "aide":
         afficher_aide()
     else:
