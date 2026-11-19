@@ -35,7 +35,8 @@ def lister():
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage : python todo.py [ajouter <texte> | lister]")
+        print("Usage : python todo.py <commande> [arguments]")
+        print("Commandes : ajouter <texte>, lister")
         return
     commande = sys.argv[1]
     if commande == "ajouter":
