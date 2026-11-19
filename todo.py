@@ -30,6 +30,7 @@ def lister():
     for numero, tache in enumerate(taches, start=1):
         case = "x" if tache["faite"] else " "
         print(f"{numero}. [{case}] {tache['texte']}")
+    print(f"Total : {len(taches)} tâche(s)")
 
 
 def main():
