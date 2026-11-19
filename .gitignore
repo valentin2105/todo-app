@@ -1,0 +1,12 @@
+# Données locales de l'application
+taches.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Système / éditeurs
+.vscode/
+Thumbs.db
+desktop.ini
