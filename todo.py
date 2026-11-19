@@ -26,7 +26,7 @@ def ajouter(texte):
 def lister():
     taches = charger()
     if not taches:
-        print("Aucune tâche.")
+        print("Rien à faire pour le moment.")
     for numero, tache in enumerate(taches, start=1):
         case = "x" if tache["faite"] else " "
         print(f"{numero}. [{case}] {tache['texte']}")
