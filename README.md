@@ -12,3 +12,6 @@ Petit gestionnaire de tâches en ligne de commande, écrit en Python.
 ## Prérequis
 
 - Python 3.10 ou supérieur
+
+## Contact
+github: valentin2105
