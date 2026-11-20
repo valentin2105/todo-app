@@ -3,6 +3,7 @@ import json
 import sys
 from pathlib import Path
 
+# Fichier qui contient les taches
 FICHIER = Path("taches.json")
 
 
@@ -69,3 +70,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
